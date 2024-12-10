@@ -9,8 +9,9 @@ from models.event import Event
 from models.user import User
 
 
-class Settings(BaseSettings):  # type: ignore
+class Settings(BaseSettings):
     DATABASE_URL: Optional[str] = None
+    SECRET_KEY: Optional[str] = None
 
     async def initialize_database(self):
         try:
