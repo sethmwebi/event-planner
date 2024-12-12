@@ -11,5 +11,6 @@ async def authenticate(token: str = Depends(oauth2_scheme)) -> str:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN, detail="Sign in for access"
         )
+
     decoded_token = verify_access_token(token)
     return decoded_token["user"]
