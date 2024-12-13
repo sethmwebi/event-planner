@@ -33,6 +33,7 @@ app.add_middleware(
 )
 
 logging.getLogger("passlib").setLevel(logging.ERROR)
+logging.getLogger("crypt").setLevel(logging.ERROR)
 
 
 # Register routes
